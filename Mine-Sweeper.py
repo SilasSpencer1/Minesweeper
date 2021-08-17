@@ -138,6 +138,13 @@ while True:
             result = ms.after_click(last_i, last_j)
             if result == 0:
                 flag = -1
+                overImg = pygame.image.load('gameover_thumb[3].jpg')
+                screen.blit(overImg, (last_i, last_j))
+            else:
+                timer.tick(2)
+                safeImg = pygame.image.load('SMirC-thumbsup.svg.png') 
+                screen.blit(safeImg, (100, 100))
+                timer.tick(2)
 
     ms.visible_list = visible_list
     ms.grid_list = grid_list
